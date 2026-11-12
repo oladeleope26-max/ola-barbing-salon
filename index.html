@@ -6,42 +6,51 @@
 <title>OLA Barbing & Dreadlock Salon - Lugbe Abuja</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-body{background:#fff;color:#111;padding-bottom:80px}
-header{background:#a80e0e;color:#fff;padding:15px;text-align:center;position:sticky;top:0;z-index:10}
-header h1{font-size:22px}
-header p{font-size:13px;color:#ffd700}
-.hero{text-align:center;padding:25px 15px;background:#fff5f5}
-.hero img{width:260px;height:auto;max-height:260px;object-fit:contain;background:#fff;border-radius:16px;border:6px solid #c9a227;padding:10px;box-shadow:0 10px 25px rgba(0,0,0,.2)}
-.hero h2{font-size:32px;color:#a80e0e;margin-top:15px}
-.hero h2 span{color:#c9a227}
-.hero p{margin:8px 0;color:#444}
-.btn{display:block;background:#a80e0e;color:#fff;padding:15px;text-align:center;border-radius:12px;text-decoration:none;font-weight:bold;margin:12px 0}
-.btn-gold{background:#c9a227;color:#000}
-.btn-green{background:#25D366}
-.btn-black{background:#111}
-.btn-purple{background:#6a0dad}
-.card{background:#fff;border:1px solid #eee;border-radius:16px;padding:16px;margin:14px;box-shadow:0 4px 14px rgba(0,0,0,.06)}
-.card h3{color:#a80e0e;margin-bottom:10px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.service{background:#fff5f5;padding:14px;border-radius:12px;text-align:center}
-.service b{font-size:15px}
-.service p{color:#a80e0e;font-weight:bold;margin-top:5px}
+body{background:#111;color:#111;padding-bottom:80px}
+header{background:#000;color:#FFD700;padding:15px;text-align:center;position:sticky;top:0;z-index:10;border-bottom:3px solid #FFD700}
+header h1{font-size:22px;color:#FFD700}
+header p{font-size:13px;color:#fff}
+.hero{text-align:center;padding:25px 15px;background:#111}
+.hero img{width:260px;height:auto;max-height:260px;object-fit:contain;background:#000;border-radius:16px;border:6px solid #FFD700;padding:10px;box-shadow:0 10px 25px rgba(0,0,0,.5)}
+.hero h2{font-size:32px;color:#fff;margin-top:15px}
+.hero h2 span{color:#FFD700}
+.hero p{margin:8px 0;color:#ddd}
+.btn{display:block;background:#FFD700;color:#000;padding:15px;text-align:center;border-radius:12px;text-decoration:none;font-weight:bold;margin:12px 0;border:2px solid #FFD700;cursor:pointer}
+.btn-gold{background:#FFD700;color:#000}
+.btn-green{background:#25D366;color:#fff;border-color:#25D366}
+.btn-black{background:#000;color:#FFD700;border:2px solid #FFD700}
+.card{background:#fff;border:1px solid #FFD700;border-radius:16px;padding:16px;margin:14px;box-shadow:0 4px 14px rgba(0,0,0,.3)}
+.card h3{color:#000;margin-bottom:10px}
+.price-list{list-style:none}
+.price-list li{display:flex;justify-content:space-between;align-items:center;background:#FFF8DC;border:1px solid #FFD700;border-radius:10px;padding:12px;margin-bottom:8px;font-size:15px}
+.price-list li b{color:#000}
+.price-list li span{color:#000;font-weight:bold;white-space:nowrap;margin-left:10px}
+.price-section-title{background:#000;color:#FFD700;padding:10px 12px;border-radius:10px;font-weight:bold;margin:14px 0 8px 0;font-size:15px;text-align:center}
 label{font-weight:bold;font-size:14px;display:block;margin-top:10px}
 input,select{width:100%;padding:13px;margin:7px 0;border:1px solid #ddd;border-radius:10px;font-size:15px}
 .gallery{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.gitem{border-radius:14px;overflow:hidden;border:1px solid #eee;background:#fff}
+.gitem{border-radius:14px;overflow:hidden;border:2px solid #FFD700;background:#fff;cursor:pointer;transition:0.2s}
 .gitem img{width:100%;height:200px;object-fit:cover;display:block}
 .gitem div{padding:10px;text-align:center}
 .gitem b{font-size:14px}
-.gitem p{color:#a80e0e;font-weight:bold;font-size:13px}
-.paybox{background:#f3e8ff;border:2px dashed #6a0dad;border-radius:14px;padding:16px;text-align:center;margin-top:10px}
+.gitem p{color:#000;font-weight:bold;font-size:13px}
+.gitem.selected{border:4px solid #25D366;box-shadow:0 0 0 3px #FFD700;transform:scale(1.02)}
+.gitem .select-btn{background:#FFD700;color:#000;border:none;padding:8px 12px;border-radius:8px;font-weight:bold;margin-top:8px;width:100%;cursor:pointer}
+.gitem.selected .select-btn{background:#25D366;color:#fff}
+.selected-box{background:#000;color:#FFD700;padding:14px;border-radius:12px;text-align:center;margin:12px 0;border:2px solid #FFD700;display:none}
+.selected-box b{font-size:16px}
+.selected-box span{color:#fff}
+.paybox{background:#FFF8DC;border:2px dashed #000;border-radius:14px;padding:16px;text-align:center;margin-top:10px}
 .paybox b{font-size:18px}
 .paybox p{margin:6px 0}
-footer{background:#111;color:#fff;text-align:center;padding:20px;font-size:13px;line-height:1.6}
-footer a{color:#ffd700}
+footer{background:#000;color:#fff;text-align:center;padding:20px;font-size:13px;line-height:1.6;border-top:3px solid #FFD700}
+footer a{color:#FFD700}
 .whatsapp-float{position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:30px;text-decoration:none;box-shadow:0 5px 15px rgba(0,0,0,.3);z-index:100}
 .whatsapp-bar{position:fixed;bottom:0;left:0;right:0;background:#25D366;color:#fff;text-align:center;padding:12px;font-weight:bold;text-decoration:none;z-index:99;font-size:15px}
-.date-box{background:#fff5f5;border:2px solid #a80e0e;border-radius:12px;padding:12px;margin:10px 0}
+.date-box{background:#FFF8DC;border:2px solid #FFD700;border-radius:12px;padding:12px;margin:10px 0}
+.filter-btns{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.filter-btns button{flex:1;background:#fff;border:2px solid #000;padding:10px;border-radius:10px;font-weight:bold;cursor:pointer;min-width:80px}
+.filter-btns button.active{background:#FFD700;color:#000;border-color:#FFD700}
 </style>
 </head>
 <body>
@@ -57,40 +66,75 @@ footer a{color:#ffd700}
 <p>🔥 Haircuts • Hair Tint • Dreadlocks • Hair Treatments</p>
 <p>⭐ No.1 Barber for Lugbe, Abuja - Clean cuts, sharp lines, professional dreadlocks</p>
 <a class="btn" href="#book">📅 BOOK YOUR CUT NOW</a>
-<a class="btn btn-gold" href="track.html?id=OLA001">📍 TRACK YOUR BARBER LIVE</a>
+<a class="btn btn-black" href="track.html?id=OLA001">📍 TRACK YOUR BARBER LIVE</a>
 <a class="btn btn-green" href="https://wa.me/2348084487871?text=Hello%20OLA%2C%20I%20want%20to%20book%20a%20haircut">💬 WHATSAPP: 08084487871</a>
 <a class="btn btn-black" href="tel:+2348084487871">📞 CALL: 08084487871</a>
 </div>
 
 <div class="card">
 <h3>💈 Our Services & Prices</h3>
-<div class="grid">
-<div class="service">✂️<br><b>Shop Barbing</b><p>₦1,000</p></div>
-<div class="service">🏠<br><b>Home Service</b><p>₦5,000</p></div>
-<div class="service">🎨<br><b>Colour Dyeing</b><p>₦5,000</p></div>
-<div class="service">🌀<br><b>Dreadlocks Relocking</b><p>₦15,000</p></div>
-</div>
-<div style="background:#fff5f5;padding:14px;border-radius:12px;text-align:center;margin-top:10px"><b>🌀 Fresh Dreadlocks</b><p style="color:#a80e0e;font-weight:bold;margin-top:5px">Price: Negotiable - Chat With Us</p></div>
+<div class="price-section-title">✂️ SHOP BARBING / SERVICES</div>
+<ul class="price-list">
+<li><b>Adult Cut</b><span>₦1,000</span></li>
+<li><b>Teenager Cut</b><span>₦800</span></li>
+<li><b>Children Cut</b><span>₦500</span></li>
+<li><b>Women Cut ✂️</b><span>₦1,500</span></li>
+<li><b>Shaving / Carving</b><span>₦500</span></li>
+<li><b>Black Dyeing Only</b><span>₦1,000</span></li>
+<li><b>Barbing & Dyeing</b><span>₦2,000</span></li>
+<li><b>Shaving & Dyeing</b><span>₦1,500</span></li>
+<li><b>Barbing & Washing</b><span>₦1,500</span></li>
+</ul>
+<div class="price-section-title">🏠 OTHER SERVICES</div>
+<ul class="price-list">
+<li><b>Home Service</b><span>Negotiable</span></li>
+<li><b>Golden / Color Dyeing</b><span>Negotiable</span></li>
+<li><b>Dreadlock Relocking</b><span>Negotiable</span></li>
+<li><b>Fresh Dreadlock</b><span>Negotiable</span></li>
+</ul>
 </div>
 
-<div class="card">
-<h3>📸 Our Work - Pick Your Style, We Will Cut It For You</h3>
-<div class="gallery">
-<div class="gitem"><img src="cut1.jpg"><div><b>Fade + Sponge Curls</b><p>₦1,000 - Shop</p><a href="https://wa.me/2348084487871?text=Hello%20OLA%2C%20I%20want%20this%20Fade%20+%20Sponge%20Curls" style="color:#25D366;font-weight:bold;text-decoration:none">💬 Book This Style</a></div></div>
-<div class="gitem"><img src="cut2.jpg"><div><b>Kids Fade - Sharp Line</b><p>₦1,000 - Shop</p><a href="https://wa.me/2348084487871?text=Hello%20OLA%2C%20I%20want%20Kids%20Fade" style="color:#25D366;font-weight:bold;text-decoration:none">💬 Book This Style</a></div></div>
-<div class="gitem"><img src="cut3.jpg"><div><b>Back View - Sponge Top</b><p>₦1,000 - Shop</p><a href="https://wa.me/2348084487871?text=Hello%20OLA%2C%20I%20want%20Sponge%20Top" style="color:#25D366;font-weight:bold;text-decoration:none">💬 Book This Style</a></div></div>
-<div class="gitem"><img src="cut4.jpg"><div><b>Side Line + Fade</b><p>₦1,000 - Shop</p><a href="https://wa.me/2348084487871?text=Hello%20OLA%2C%20I%20want%20Side%20Line%20Fade" style="color:#25D366;font-weight:bold;text-decoration:none">💬 Book This Style</a></div></div>
-<div class="gitem"><img src="cut5.jpg"><div><b>Clean Low Cut - Back</b><p>₦1,000 - Shop</p><a href="https://wa.me/2348084487871?text=Hello%20OLA%2C%20I%20want%20Low%20Cut" style="color:#25D366;font-weight:bold;text-decoration:none">💬 Book This Style</a></div></div>
-<div class="gitem"><img src="cut6.jpg"><div><b>Ladies Fade</b><p>₦1,000 - Shop</p><a href="https://wa.me/2348084487871?text=Hello%20OLA%2C%20I%20want%20Ladies%20Fade" style="color:#25D366;font-weight:bold;text-decoration:none">💬 Book This Style</a></div></div>
-<div class="gitem"><img src="cut7.jpg"><div><b>V-Shape Back - Sponge</b><p>₦1,000 - Shop</p><a href="https://wa.me/2348084487871?text=Hello%20OLA%2C%20I%20want%20V-Shape%20Back" style="color:#25D366;font-weight:bold;text-decoration:none">💬 Book This Style</a></div></div>
-<div class="gitem"><img src="logo.jpg"><div><b>OLA Signature Cut</b><p>₦1,000 - Shop</p><a href="https://wa.me/2348084487871?text=Hello%20OLA%2C%20I%20want%20a%20fresh%20cut" style="color:#25D366;font-weight:bold;text-decoration:none">💬 Book This Style</a></div></div>
+<div class="card" id="styles">
+<h3>📸 Our Work - Tap To Select Your Style</h3>
+<p style="font-size:14px;color:#444;margin-bottom:12px">👇 Tap any picture to select it. It will fill your booking form automatically.</p>
+
+<div class="filter-btns">
+<button class="active" onclick="filterStyles('all',this)">All</button>
+<button onclick="filterStyles('fade',this)">Fade</button>
+<button onclick="filterStyles('kids',this)">Kids</button>
+<button onclick="filterStyles('ladies',this)">Ladies</button>
+<button onclick="filterStyles('dread',this)">Dreadlock</button>
 </div>
-<p style="text-align:center;font-size:13px;margin-top:10px">Tap "Book This Style" - It will open WhatsApp directly to OLA</p>
+
+<div id="selectedDisplay" class="selected-box">✅ You Selected: <b id="selectedName">-</b><br><span id="selectedPrice"></span><br><a href="#book" style="color:#25D366;font-weight:bold">👉 Go To Booking Form</a></div>
+
+<div class="gallery" id="gallery">
+<div class="gitem" data-cat="fade" onclick="selectStyle(this,'Fade + Sponge Curls','₦1,000 - Adult')"><img src="cut1.jpg"><div><b>Fade + Sponge Curls</b><p>₦1,000 - Adult</p><button class="select-btn">Select This Style</button></div></div>
+<div class="gitem" data-cat="kids" onclick="selectStyle(this,'Kids Fade - Sharp Line','₦500 - Children')"><img src="cut2.jpg"><div><b>Kids Fade - Sharp Line</b><p>₦500 - Children</p><button class="select-btn">Select This Style</button></div></div>
+<div class="gitem" data-cat="fade" onclick="selectStyle(this,'Back View - Sponge Top','₦1,000 - Adult')"><img src="cut3.jpg"><div><b>Back View - Sponge Top</b><p>₦1,000 - Adult</p><button class="select-btn">Select This Style</button></div></div>
+<div class="gitem" data-cat="fade" onclick="selectStyle(this,'Side Line + Fade','₦1,000 - Adult')"><img src="cut4.jpg"><div><b>Side Line + Fade</b><p>₦1,000 - Adult</p><button class="select-btn">Select This Style</button></div></div>
+<div class="gitem" data-cat="fade" onclick="selectStyle(this,'Clean Low Cut - Back','₦1,000 - Adult')"><img src="cut5.jpg"><div><b>Clean Low Cut - Back</b><p>₦1,000 - Adult</p><button class="select-btn">Select This Style</button></div></div>
+<div class="gitem" data-cat="ladies" onclick="selectStyle(this,'Ladies Fade','₦1,500 - Women')"><img src="cut6.jpg"><div><b>Ladies Fade</b><p>₦1,500 - Women</p><button class="select-btn">Select This Style</button></div></div>
+<div class="gitem" data-cat="fade" onclick="selectStyle(this,'V-Shape Back - Sponge','₦1,000 - Adult')"><img src="cut7.jpg"><div><b>V-Shape Back - Sponge</b><p>₦1,000 - Adult</p><button class="select-btn">Select This Style</button></div></div>
+<div class="gitem" data-cat="fade" onclick="selectStyle(this,'OLA Signature Cut','₦1,000 - Adult')"><img src="logo.jpg"><div><b>OLA Signature Cut</b><p>₦1,000 - Adult</p><button class="select-btn">Select This Style</button></div></div>
+<!-- NEW PICTURES - Just add your new photos as cut8.jpg, cut9.jpg etc in same folder -->
+<div class="gitem" data-cat="fade" onclick="selectStyle(this,'Afro Fade + Design','₦1,000 - Adult')"><img src="cut8.jpg"><div><b>Afro Fade + Design</b><p>₦1,000 - Adult</p><button class="select-btn">Select This Style</button></div></div>
+<div class="gitem" data-cat="fade" onclick="selectStyle(this,'Temple Fade + Beard Shape','₦1,500 - Barbing & Washing')"><img src="cut9.jpg"><div><b>Temple Fade + Beard Shape</b><p>₦1,500</p><button class="select-btn">Select This Style</button></div></div>
+<div class="gitem" data-cat="kids" onclick="selectStyle(this,'Kids Sponge Curls','₦500 - Children')"><img src="cut10.jpg"><div><b>Kids Sponge Curls</b><p>₦500 - Children</p><button class="select-btn">Select This Style</button></div></div>
+<div class="gitem" data-cat="ladies" onclick="selectStyle(this,'Ladies Low Cut + Colour','₦2,000 - Barbing & Dyeing')"><img src="cut11.jpg"><div><b>Ladies Low Cut + Colour</b><p>₦2,000</p><button class="select-btn">Select This Style</button></div></div>
+<div class="gitem" data-cat="dread" onclick="selectStyle(this,'Fresh Dreadlocks','Negotiable')"><img src="cut12.jpg"><div><b>Fresh Dreadlocks</b><p>Negotiable</p><button class="select-btn">Select This Style</button></div></div>
+<div class="gitem" data-cat="dread" onclick="selectStyle(this,'Dreadlock Relocking + Styling','Negotiable')"><img src="cut13.jpg"><div><b>Dreadlock Relocking + Styling</b><p>Negotiable</p><button class="select-btn">Select This Style</button></div></div>
+<div class="gitem" data-cat="fade" onclick="selectStyle(this,'Burst Fade + Carving','₦1,500 - Shaving & Dyeing')"><img src="cut14.jpg"><div><b>Burst Fade + Carving</b><p>₦1,500</p><button class="select-btn">Select This Style</button></div></div>
+<div class="gitem" data-cat="fade" onclick="selectStyle(this,'Buzz Cut + Black Dye','₦2,000 - Barbing & Dyeing')"><img src="cut15.jpg"><div><b>Buzz Cut + Black Dye</b><p>₦2,000</p><button class="select-btn">Select This Style</button></div></div>
+</div>
+<p style="text-align:center;font-size:13px;margin-top:12px">To add more pictures, just copy one block and change cut16.jpg and the name.</p>
 </div>
 
 <div class="card" id="book">
 <h3>📅 Book Appointment</h3>
 <p style="font-size:14px;color:#444">Fill the form below and select your date. Your booking will be sent to OLA on WhatsApp.</p>
+
+<div id="bookingSelected" class="selected-box" style="display:none;background:#FFF8DC;color:#000;border-color:#FFD700">✅ Selected Style: <b id="bookingSelectedName" style="color:#000">-</b></div>
 
 <label for="name">1. Your Name</label>
 <input type="text" id="name" placeholder="Enter your full name">
@@ -100,17 +144,28 @@ footer a{color:#ffd700}
 
 <label for="service">3. Select Service</label>
 <select id="service">
-<option>Shop Barbing - ₦1,000</option>
-<option>Home Service - ₦5,000</option>
-<option>Colour Dyeing - ₦5,000</option>
-<option>Dreadlocks Relocking - ₦15,000</option>
-<option>Fresh Dreadlocks - Negotiable</option>
+<option>Adult Cut - ₦1,000</option>
+<option>Teenager Cut - ₦800</option>
+<option>Children Cut - ₦500</option>
+<option>Women Cut - ₦1,500</option>
+<option>Shaving / Carving - ₦500</option>
+<option>Black Dyeing Only - ₦1,000</option>
+<option>Barbing & Dyeing - ₦2,000</option>
+<option>Shaving & Dyeing - ₦1,500</option>
+<option>Barbing & Washing - ₦1,500</option>
+<option>Home Service - Negotiable</option>
+<option>Golden / Color Dyeing - Negotiable</option>
+<option>Dreadlock Relocking - Negotiable</option>
+<option>Fresh Dreadlock - Negotiable</option>
 <option>Hair Treatment</option>
 </select>
 
+<label for="style">3b. Your Selected Style (Auto-filled when you tap a picture)</label>
+<input type="text" id="style" placeholder="Tap a style picture above - e.g. Fade + Sponge Curls" readonly>
+
 <div class="date-box">
 <label for="date">📅 4. PICK YOUR DATE HERE 👇</label>
-<p style="font-size:13px;color:#a80e0e;margin:5px 0">Tap the box below to select the date you want to come:</p>
+<p style="font-size:13px;color:#000;margin:5px 0">Tap the box below to select the date you want to come:</p>
 <input type="date" id="date">
 </div>
 
@@ -126,7 +181,7 @@ footer a{color:#ffd700}
 <p>🏦 <b>Bank Name:</b> OPay</p>
 <p>👤 <b>Account Name:</b> Adekolu OlaWale</p>
 <p>💳 <b>Account No:</b> <span id="acctNo" style="font-size:22px;font-weight:bold;letter-spacing:1px">08084487871</span></p>
-<button class="btn btn-purple" onclick="copyAcct()">📋 COPY ACCOUNT NUMBER</button>
+<button class="btn" onclick="copyAcct()">📋 COPY ACCOUNT NUMBER</button>
 <p id="copyMsg" style="color:green;font-size:13px"></p>
 <p style="font-size:13px;color:#555">After payment, send your receipt to WhatsApp: <b>08084487871</b></p>
 <a class="btn btn-green" href="https://wa.me/2348084487871?text=Hello%20OLA%2C%20I%20have%20paid%2C%20here%20is%20my%20receipt">💬 I HAVE PAID - SEND RECEIPT</a>
@@ -153,12 +208,44 @@ Haircuts • Hair Tint • Dreadlocks • Hair Treatments<br>
 <a class="whatsapp-bar" href="https://wa.me/2348084487871?text=Hello%20OLA%2C%20I%20want%20to%20book">💬 WHATSAPP US: 08084487871 - TAP TO CHAT</a>
 
 <script>
+var selectedStyleName = '';
+function selectStyle(el, name, price){
+  // remove selected from all
+  var items = document.querySelectorAll('.gitem');
+  items.forEach(function(i){ i.classList.remove('selected'); i.querySelector('.select-btn').innerText='Select This Style'; });
+  // add to clicked
+  el.classList.add('selected');
+  el.querySelector('.select-btn').innerText='✅ Selected';
+  selectedStyleName = name;
+  // show boxes
+  var box = document.getElementById('selectedDisplay');
+  box.style.display='block';
+  document.getElementById('selectedName').innerText = name;
+  document.getElementById('selectedPrice').innerText = price;
+  // fill booking form
+  document.getElementById('style').value = name + ' (' + price + ')';
+  var bBox = document.getElementById('bookingSelected');
+  bBox.style.display='block';
+  document.getElementById('bookingSelectedName').innerText = name + ' - ' + price;
+  // auto scroll to booking after short delay
+  setTimeout(function(){ document.getElementById('book').scrollIntoView({behavior:'smooth'}); }, 600);
+}
+function filterStyles(cat, btn){
+  var btns = document.querySelectorAll('.filter-btns button');
+  btns.forEach(function(b){ b.classList.remove('active'); });
+  btn.classList.add('active');
+  var items = document.querySelectorAll('.gitem');
+  items.forEach(function(i){
+    if(cat==='all' || i.getAttribute('data-cat')===cat){ i.style.display='block'; } else { i.style.display='none'; }
+  });
+}
 function bookNow(){
 var n=document.getElementById('name').value||'Customer';
 var s=document.getElementById('service').value;
+var st=document.getElementById('style').value||'No specific style selected';
 var d=document.getElementById('date').value||'Today';
 var id=document.getElementById('bookingId').value||'OLA123';
-var text='Hello OLA, I want to book:%0AName: '+n+'%0AService: '+s+'%0ADate: '+d+'%0ABooking ID: '+id;
+var text='Hello OLA, I want to book:%0AName: '+n+'%0AService: '+s+'%0AStyle: '+st+'%0ADate: '+d+'%0ABooking ID: '+id;
 document.getElementById('msg').innerText='Your Booking ID is '+id+' - You can track your barber with this ID!';
 window.open('https://wa.me/2348084487871?text='+text,'_blank');
 }
