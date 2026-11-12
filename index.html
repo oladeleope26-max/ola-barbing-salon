@@ -16,7 +16,6 @@ header p{font-size:13px;color:#fff}
 .hero h2 span{color:#FFD700}
 .hero p{margin:8px 0;color:#ddd}
 .btn{display:block;background:#FFD700;color:#000;padding:15px;text-align:center;border-radius:12px;text-decoration:none;font-weight:bold;margin:12px 0;border:2px solid #FFD700;cursor:pointer}
-.btn-gold{background:#FFD700;color:#000}
 .btn-green{background:#25D366;color:#fff;border-color:#25D366}
 .btn-black{background:#000;color:#FFD700;border:2px solid #FFD700}
 .card{background:#fff;border:1px solid #FFD700;border-radius:16px;padding:16px;margin:14px;box-shadow:0 4px 14px rgba(0,0,0,.3)}
@@ -29,7 +28,7 @@ header p{font-size:13px;color:#fff}
 label{font-weight:bold;font-size:14px;display:block;margin-top:10px}
 input,select{width:100%;padding:13px;margin:7px 0;border:1px solid #ddd;border-radius:10px;font-size:15px}
 .gallery{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.gitem{border-radius:14px;overflow:hidden;border:2px solid #FFD700;background:#fff;cursor:pointer;transition:0.2s}
+.gitem{border-radius:14px;overflow:hidden;border:2px solid #FFD700;background:#fff;cursor:pointer}
 .gitem img{width:100%;height:200px;object-fit:cover;display:block}
 .gitem div{padding:10px;text-align:center}
 .gitem b{font-size:14px}
@@ -97,18 +96,18 @@ footer a{color:#FFD700}
 <div class="card" id="styles">
 <h3>📸 Our Work - Tap To Select Your Style</h3>
 <p style="font-size:14px;color:#444;margin-bottom:12px">👇 Tap any picture to select it. It will fill your booking form automatically.</p>
-
 <div class="filter-btns">
 <button class="active" onclick="filterStyles('all',this)">All</button>
 <button onclick="filterStyles('fade',this)">Fade</button>
 <button onclick="filterStyles('kids',this)">Kids</button>
 <button onclick="filterStyles('ladies',this)">Ladies</button>
 <button onclick="filterStyles('dread',this)">Dreadlock</button>
+<button onclick="filterStyles('dye',this)">Dyeing</button>
 </div>
-
 <div id="selectedDisplay" class="selected-box">✅ You Selected: <b id="selectedName">-</b><br><span id="selectedPrice"></span><br><a href="#book" style="color:#25D366;font-weight:bold">👉 Go To Booking Form</a></div>
 
-<div class="gallery" id="gallery">
+<div class="gallery">
+<!-- OLD STYLES -->
 <div class="gitem" data-cat="fade" onclick="selectStyle(this,'Fade + Sponge Curls','₦1,000 - Adult')"><img src="cut1.jpg"><div><b>Fade + Sponge Curls</b><p>₦1,000 - Adult</p><button class="select-btn">Select This Style</button></div></div>
 <div class="gitem" data-cat="kids" onclick="selectStyle(this,'Kids Fade - Sharp Line','₦500 - Children')"><img src="cut2.jpg"><div><b>Kids Fade - Sharp Line</b><p>₦500 - Children</p><button class="select-btn">Select This Style</button></div></div>
 <div class="gitem" data-cat="fade" onclick="selectStyle(this,'Back View - Sponge Top','₦1,000 - Adult')"><img src="cut3.jpg"><div><b>Back View - Sponge Top</b><p>₦1,000 - Adult</p><button class="select-btn">Select This Style</button></div></div>
@@ -117,31 +116,28 @@ footer a{color:#FFD700}
 <div class="gitem" data-cat="ladies" onclick="selectStyle(this,'Ladies Fade','₦1,500 - Women')"><img src="cut6.jpg"><div><b>Ladies Fade</b><p>₦1,500 - Women</p><button class="select-btn">Select This Style</button></div></div>
 <div class="gitem" data-cat="fade" onclick="selectStyle(this,'V-Shape Back - Sponge','₦1,000 - Adult')"><img src="cut7.jpg"><div><b>V-Shape Back - Sponge</b><p>₦1,000 - Adult</p><button class="select-btn">Select This Style</button></div></div>
 <div class="gitem" data-cat="fade" onclick="selectStyle(this,'OLA Signature Cut','₦1,000 - Adult')"><img src="logo.jpg"><div><b>OLA Signature Cut</b><p>₦1,000 - Adult</p><button class="select-btn">Select This Style</button></div></div>
-<!-- NEW PICTURES - Just add your new photos as cut8.jpg, cut9.jpg etc in same folder -->
-<div class="gitem" data-cat="fade" onclick="selectStyle(this,'Afro Fade + Design','₦1,000 - Adult')"><img src="cut8.jpg"><div><b>Afro Fade + Design</b><p>₦1,000 - Adult</p><button class="select-btn">Select This Style</button></div></div>
-<div class="gitem" data-cat="fade" onclick="selectStyle(this,'Temple Fade + Beard Shape','₦1,500 - Barbing & Washing')"><img src="cut9.jpg"><div><b>Temple Fade + Beard Shape</b><p>₦1,500</p><button class="select-btn">Select This Style</button></div></div>
-<div class="gitem" data-cat="kids" onclick="selectStyle(this,'Kids Sponge Curls','₦500 - Children')"><img src="cut10.jpg"><div><b>Kids Sponge Curls</b><p>₦500 - Children</p><button class="select-btn">Select This Style</button></div></div>
-<div class="gitem" data-cat="ladies" onclick="selectStyle(this,'Ladies Low Cut + Colour','₦2,000 - Barbing & Dyeing')"><img src="cut11.jpg"><div><b>Ladies Low Cut + Colour</b><p>₦2,000</p><button class="select-btn">Select This Style</button></div></div>
-<div class="gitem" data-cat="dread" onclick="selectStyle(this,'Fresh Dreadlocks','Negotiable')"><img src="cut12.jpg"><div><b>Fresh Dreadlocks</b><p>Negotiable</p><button class="select-btn">Select This Style</button></div></div>
-<div class="gitem" data-cat="dread" onclick="selectStyle(this,'Dreadlock Relocking + Styling','Negotiable')"><img src="cut13.jpg"><div><b>Dreadlock Relocking + Styling</b><p>Negotiable</p><button class="select-btn">Select This Style</button></div></div>
-<div class="gitem" data-cat="fade" onclick="selectStyle(this,'Burst Fade + Carving','₦1,500 - Shaving & Dyeing')"><img src="cut14.jpg"><div><b>Burst Fade + Carving</b><p>₦1,500</p><button class="select-btn">Select This Style</button></div></div>
-<div class="gitem" data-cat="fade" onclick="selectStyle(this,'Buzz Cut + Black Dye','₦2,000 - Barbing & Dyeing')"><img src="cut15.jpg"><div><b>Buzz Cut + Black Dye</b><p>₦2,000</p><button class="select-btn">Select This Style</button></div></div>
+
+<!-- NEW REAL WORK - YOUR 9 NEW PICTURES -->
+<div class="gitem" data-cat="dye" onclick="selectStyle(this,'Golden Blonde Low Cut - Side','Negotiable - Golden Dyeing')"><img src="new1.jpg"><div><b>Golden Blonde Low Cut - Side</b><p>Negotiable - Golden Dyeing</p><button class="select-btn">Select This Style</button></div></div>
+<div class="gitem" data-cat="dye" onclick="selectStyle(this,'Golden Blonde Low Cut - Back','Negotiable - Golden Dyeing')"><img src="new2.jpg"><div><b>Golden Blonde Low Cut - Back</b><p>Negotiable - Golden Dyeing</p><button class="select-btn">Select This Style</button></div></div>
+<div class="gitem" data-cat="dye" onclick="selectStyle(this,'Golden Blonde Cut + Line','Negotiable - Golden Dyeing')"><img src="new3.jpg"><div><b>Golden Blonde Cut + Line</b><p>Negotiable - Golden Dyeing</p><button class="select-btn">Select This Style</button></div></div>
+<div class="gitem" data-cat="dye" onclick="selectStyle(this,'Golden Blonde Low Cut - Side View','Negotiable - Golden Dyeing')"><img src="new4.jpg"><div><b>Golden Blonde Low Cut - Side View</b><p>Negotiable - Golden Dyeing</p><button class="select-btn">Select This Style</button></div></div>
+<div class="gitem" data-cat="fade" onclick="selectStyle(this,'Black Sponge Curls Fade','₦1,000 - Adult')"><img src="new5.jpg"><div><b>Black Sponge Curls Fade</b><p>₦1,000 - Adult</p><button class="select-btn">Select This Style</button></div></div>
+<div class="gitem" data-cat="kids" onclick="selectStyle(this,'Kids Sponge Curls Fade','₦500 - Children')"><img src="new6.jpg"><div><b>Kids Sponge Curls Fade</b><p>₦500 - Children</p><button class="select-btn">Select This Style</button></div></div>
+<div class="gitem" data-cat="dye" onclick="selectStyle(this,'Golden Afro - Blonde Afro','Negotiable - Golden Dyeing')"><img src="new7.jpg"><div><b>Golden Afro - Blonde Afro</b><p>Negotiable - Golden Dyeing</p><button class="select-btn">Select This Style</button></div></div>
+<div class="gitem" data-cat="fade" onclick="selectStyle(this,'Adult Fade + Beard - Back','₦1,000 - Adult')"><img src="new8.jpg"><div><b>Adult Fade + Beard - Back</b><p>₦1,000 - Adult</p><button class="select-btn">Select This Style</button></div></div>
+<div class="gitem" data-cat="fade" onclick="selectStyle(this,'Adult Fade + Beard Shape','₦1,000 - Adult')"><img src="new9.jpg"><div><b>Adult Fade + Beard Shape</b><p>₦1,000 - Adult</p><button class="select-btn">Select This Style</button></div></div>
 </div>
-<p style="text-align:center;font-size:13px;margin-top:12px">To add more pictures, just copy one block and change cut16.jpg and the name.</p>
 </div>
 
 <div class="card" id="book">
 <h3>📅 Book Appointment</h3>
 <p style="font-size:14px;color:#444">Fill the form below and select your date. Your booking will be sent to OLA on WhatsApp.</p>
-
 <div id="bookingSelected" class="selected-box" style="display:none;background:#FFF8DC;color:#000;border-color:#FFD700">✅ Selected Style: <b id="bookingSelectedName" style="color:#000">-</b></div>
-
 <label for="name">1. Your Name</label>
 <input type="text" id="name" placeholder="Enter your full name">
-
 <label for="phone">2. Your Phone Number</label>
 <input type="tel" id="phone" placeholder="Enter your phone number">
-
 <label for="service">3. Select Service</label>
 <select id="service">
 <option>Adult Cut - ₦1,000</option>
@@ -159,16 +155,13 @@ footer a{color:#FFD700}
 <option>Fresh Dreadlock - Negotiable</option>
 <option>Hair Treatment</option>
 </select>
-
 <label for="style">3b. Your Selected Style (Auto-filled when you tap a picture)</label>
-<input type="text" id="style" placeholder="Tap a style picture above - e.g. Fade + Sponge Curls" readonly>
-
+<input type="text" id="style" placeholder="Tap a style picture above" readonly>
 <div class="date-box">
 <label for="date">📅 4. PICK YOUR DATE HERE 👇</label>
 <p style="font-size:13px;color:#000;margin:5px 0">Tap the box below to select the date you want to come:</p>
 <input type="date" id="date">
 </div>
-
 <label for="bookingId">5. Booking ID</label>
 <input type="text" id="bookingId" placeholder="Booking ID - e.g. OLA123" value="OLA123">
 <button class="btn btn-green" onclick="bookNow()">✅ BOOK VIA WHATSAPP - 08084487871</button>
@@ -210,24 +203,19 @@ Haircuts • Hair Tint • Dreadlocks • Hair Treatments<br>
 <script>
 var selectedStyleName = '';
 function selectStyle(el, name, price){
-  // remove selected from all
   var items = document.querySelectorAll('.gitem');
   items.forEach(function(i){ i.classList.remove('selected'); i.querySelector('.select-btn').innerText='Select This Style'; });
-  // add to clicked
   el.classList.add('selected');
   el.querySelector('.select-btn').innerText='✅ Selected';
   selectedStyleName = name;
-  // show boxes
   var box = document.getElementById('selectedDisplay');
   box.style.display='block';
   document.getElementById('selectedName').innerText = name;
   document.getElementById('selectedPrice').innerText = price;
-  // fill booking form
   document.getElementById('style').value = name + ' (' + price + ')';
   var bBox = document.getElementById('bookingSelected');
   bBox.style.display='block';
   document.getElementById('bookingSelectedName').innerText = name + ' - ' + price;
-  // auto scroll to booking after short delay
   setTimeout(function(){ document.getElementById('book').scrollIntoView({behavior:'smooth'}); }, 600);
 }
 function filterStyles(cat, btn){
